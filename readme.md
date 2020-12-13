@@ -37,7 +37,7 @@ npm run start
 
 Your simplified ReactJS code should look like this:
 
-```
+```jsx
 import React, {Component} from 'react';
 
 class Contact extends Component {

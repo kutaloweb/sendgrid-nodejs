@@ -1,4 +1,4 @@
-# SENDGRID NODEJS CONTACT US
+# SENDGRID NODEJS - CONTACT US FORM
 
 SENDGRID NODEJS is a tool which allows you to send Contact Us email using SendGrid, Express, NodeJS and React.
 
@@ -93,53 +93,33 @@ class Contact extends Component {
 
     render() {
         return (
-            <form id="contactForm">
-                <div className="row">
-                    <div className="col-lg-6">
-                        <input type="text"
-                               id="name"
-                               name="name"
-                               className="form-control"
-                               placeholder="Your Name*"
-                               value={this.state.message.name}
-                               onChange={this.onChange}
-                        />
-                    </div>
-                    <div className="col-lg-6">
-                        <input type="text"
-                               id="fromEmail"
-                               name="fromEmail"
-                               className="form-control"
-                               placeholder="Your Email*"
-                               value={this.state.message.fromEmail}
-                               onChange={this.onChange}
-                        />
-                    </div>
-                    <div className="col-lg-6">
-                        <input type="text"
-                               id="subject"
-                               name="subject"
-                               className="form-control"
-                               placeholder="Subject*"
-                               value={this.state.message.subject}
-                               onChange={this.onChange}
-                        />
-                    </div>
-                    <div className="col-lg-6">
-                        <input type="text"
-                               id="phone"
-                               name="phone"
-                               className="form-control"
-                               placeholder="Phone*"
-                               value={this.state.message.phone}
-                               onChange={this.onChange}
-                        />
-                    </div>
-                </div>
+            <form>
+                <input type="text"
+                       name="name"
+                       placeholder="Your Name*"
+                       value={this.state.message.name}
+                       onChange={this.onChange}
+                />
+                <input type="text"
+                       name="fromEmail"
+                       placeholder="Your Email*"
+                       value={this.state.message.fromEmail}
+                       onChange={this.onChange}
+                />
+                <input type="text"
+                       name="subject"
+                       placeholder="Subject*"
+                       value={this.state.message.subject}
+                       onChange={this.onChange}
+                />
+                <input type="text"
+                       name="phone"
+                       placeholder="Phone*"
+                       value={this.state.message.phone}
+                       onChange={this.onChange}
+                />
                 <textarea
                     name="body"
-                    id="body"
-                    className="form-control"
                     rows="6"
                     placeholder="Your Message ..."
                     value={this.state.message.body}
@@ -147,7 +127,6 @@ class Contact extends Component {
                 />
                 <button
                     type="submit"
-                    className="btn send_btn theme_btn"
                     disabled={this.state.submitting}
                     onClick={this.onClick}
                 >
